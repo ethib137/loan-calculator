@@ -15,6 +15,7 @@
 		"babel-loader": "7.1.5"
 	},
 	"dependencies": {
+		"@clayui/slider": "^3.1.0",
 		"react": "16.8.6",
 		"react-dom": "16.8.6"
 	},

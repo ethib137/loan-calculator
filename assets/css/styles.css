@@ -10,3 +10,17 @@
 	font-family: monospace; white-space: pre;
 }
 
+.unstyled-input {
+	border-width: 0;
+	font-size: inherit;
+	padding: 0;
+	text-align: right;
+}
+
+.unstyled-input:focus {
+	outline: none;
+}
+
+.value-container {
+	font-size: 24px;
+}

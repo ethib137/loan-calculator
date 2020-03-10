@@ -15,17 +15,13 @@ import LoanCalculator from './LoanCalculator';
  * @return {void}
  */
 export default function main({portletNamespace, contextPath, portletElementId, configuration}) {
-    
-    ReactDOM.render(
-        <LoanCalculator 
-            portletNamespace={portletNamespace} 
-            contextPath={contextPath}
-            portletElementId={portletElementId}
-            
-            configuration={configuration}
-            
-            />, 
-        document.getElementById(portletElementId)
-    );
-    
+	ReactDOM.render(
+		<LoanCalculator 
+			portletNamespace={portletNamespace} 
+			contextPath={contextPath}
+			portletElementId={portletElementId}
+			configuration={configuration}
+		/>, 
+		document.getElementById(portletElementId)
+	);
 }
