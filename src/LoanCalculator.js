@@ -68,8 +68,13 @@ export default (props) => {
 		[interestRate, loanAmount, term]
 	);
 
-
 	const formatter = Intl.NumberFormat(themeDisplay.getBCP47LanguageId(), {style: 'decimal'});
+
+	const formattedMonthlyPayment = formatter.format(monthlyPayment);
+
+	const unitsDisplay = <span className={amountUnitsPrefix ? 'mr-1' : 'ml-1'} key="value">{amountUnitsPlural}</span>;
+
+	const monthlyPaymentDisplay = amountUnitsPrefix ? [unitsDisplay, formattedMonthlyPayment] : [formattedMonthlyPayment, unitsDisplay];
 
 	return (
 		<div>
@@ -119,7 +124,7 @@ export default (props) => {
 			<div className="align-items-end d-flex flex-wrap justify-content-around">
 				<h4>Monthly Payment: </h4>
 
-				<div className="display-4 flex-shrink-0 mx-1">{'AED ' + formatter.format(monthlyPayment)}</div>
+				<div className="display-4 flex-shrink-0 mx-1">{monthlyPaymentDisplay}</div>
 			</div>
 		</div>
 	);
