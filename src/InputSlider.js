@@ -54,7 +54,7 @@ export default (props) => {
 		key="input"
 		onBlur={handleBlur}
 		onChange={event => setEditValue(event.target.value)}
-		size={editValue.toString().length}
+		size={editValue.toString().length + 1}
 		type="text"
 		value={editValue}
 	/>;
@@ -72,9 +72,11 @@ export default (props) => {
 	const valueValueWithLabel = valueLabelPrefix ? [valueLabel, valueDisplay] : [valueDisplay, valueLabel];
 
 	return (
-		<div className="form-group">
-			<div className="d-flex justify-content-between">
-				<label htmlFor={id}><h3>{label}</h3></label>
+		<div className="form-group slider">
+			<div className="align-items-center d-flex justify-content-between">
+				<label htmlFor={id}>
+					<h3 class="mb-0">{label}</h3>
+				</label>
 
 				<div className="value-container" onClick={() => setEditing(true)}>{valueValueWithLabel}</div>
 			</div>

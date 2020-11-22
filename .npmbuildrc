@@ -1,7 +1,7 @@
 {
 	"translatorTextKey": "",
 	"supportedLocales": [],
-	"liferayDir": "/Users/evanthibodeau/Documents/Liferay/Bundles/7.2.10-ga1-fp4",
+	"liferayDir": "/Users/evanthibodeau/Documents/Liferay/Bundles/liferay-dxp-7.3.10-ga1",
 	"webpack": {
 		"rules": [
 			{
